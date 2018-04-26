@@ -27,7 +27,7 @@ public class ClockWork {
 	//Setters and getters
 	
 	public void setTickTime(int tick) { //Set tick time
-		
+		tickTime = tick;
 	}
 	
 	public void addActionListener(ActionListener watch) { //Setter for listener
