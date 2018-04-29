@@ -1,6 +1,6 @@
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.*;
-import javax.swing.*;
+
 import javax.swing.Timer;
 
 public class ClockWork {
@@ -21,7 +21,7 @@ public class ClockWork {
 	// Methods
 
 	public ClockWork() { // Constructor
-
+		
 	}
 
 	// Setters and getters
@@ -50,7 +50,7 @@ public class ClockWork {
 	}
 
 	public void addActionListener(ActionListener watch) { // Setter for listener
-
+		
 	}
 
 	public void loadTacks() { // Populate four end-point coord-arrs for tacks
@@ -90,13 +90,13 @@ public class ClockWork {
 		/*
 		 * Stops the timer resets arm index values to 0 calls connect()
 		 */
-
+		
 		timer.stop();
 		longArmIndex = 0;
 		shortArmIndex = 0;
 		secondArmIndex = 0;
 		connect();
-
+		
 	}
 
 	private boolean timeFormat(String inp) { // Validates parameter inp if it is correct, t/f based on validation
