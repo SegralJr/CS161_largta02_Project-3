@@ -3,6 +3,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.*;
 import java.awt.*;
 
@@ -11,10 +12,19 @@ public class ControlDevices extends JFrame implements ActionListener {
 	// Data fields
 	
 	private ClockWork work;
-	private JTextField textField;
-	private JLabel label;
-	private JButton button1, button2, button3, button4;
-	private JSlider slider;
+	private JTextField textField = new JTextField();
+	
+	private JLabel
+	enterTimeLabel = new JLabel("Enter time use format 15:42"),
+	selectTickTimeLabel = new JLabel("Select tick time");
+	
+	private JButton
+	runButton = new JButton("Run the Clock"),
+	stopButton = new JButton("Stop the Clock"),
+	resetButton = new JButton("Reset the Clock"),
+	setButton = new JButton("Set the Clock");
+	
+	private JSlider tickSlider = new JSlider(JSlider.VERTICAL, 0, 1000, 1000);
 	
 	/*
 	 * All of above swing components can be instantiated at declaration
@@ -28,6 +38,10 @@ public class ControlDevices extends JFrame implements ActionListener {
 		 * Calls makeSlider()
 		 * Calls buildControlGUI()
 		 */
+		
+		work  = new ClockWork();
+		makeSlider();
+		buildControlGUI();
 	}
 	
 	//Instance methods
@@ -37,6 +51,14 @@ public class ControlDevices extends JFrame implements ActionListener {
 		 * Creates the slider
 		 * Book, lecture material, and lab 8 experience apply
 		 */
+		
+		tickSlider.setPaintLabels(true);
+		tickSlider.setPaintTicks(true);
+		tickSlider.setMajorTickSpacing(100);
+		tickSlider.setMinorTickSpacing(10);
+		
+		tickSlider.addChangeListener((ChangeListener) this);
+		
 	}
 	
 	private void buildControlGUI() { //Creates the GUI
