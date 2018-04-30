@@ -3,10 +3,11 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 
-public class FaceGUI {
+public class FaceGUI extends JFrame implements ActionListener {
 	
 	//Data fields
 	
@@ -17,7 +18,7 @@ public class FaceGUI {
 	//GUI Stuff
 	
 	//Panels
-	protected JPanel
+	private JPanel
 	north = new JPanel(),
 	east = new JPanel(),
 	south = new JPanel(),
@@ -51,14 +52,12 @@ public class FaceGUI {
 		 * Calls loadTacks of ClockWork, instantiates field face
 		 */
 		
-		
+		Container window = getContentPane();
 		
 	}
 	
 	public void actionPerformed(ActionEvent event) {
-		/*
-		 * Calls repaint()
-		 */
+		repaint();
 	}
 	
 	public class Face extends JPanel {
@@ -96,7 +95,6 @@ public class FaceGUI {
 				y[k] = arr2[1][k];
 			}
 		}
-		
 	}
 	
 }
