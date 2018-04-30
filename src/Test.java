@@ -7,10 +7,7 @@ public class Test {
 		ClockWork cw = new ClockWork();
 		ControlDevices cd = new ControlDevices(cw);
 		FaceGUI fg = new FaceGUI(cw);
-<<<<<<< HEAD
-=======
 		
->>>>>>> parent of ca9fbba... Used Eclipse Format Tool
 	}
 
 }

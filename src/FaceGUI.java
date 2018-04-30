@@ -1,4 +1,7 @@
-import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.event.ChangeEvent;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 import javax.swing.JPanel;

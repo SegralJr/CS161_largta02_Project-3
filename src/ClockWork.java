@@ -1,6 +1,6 @@
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+import java.awt.event.*;
+import javax.swing.*;
 import javax.swing.Timer;
 
 public class ClockWork {
@@ -17,17 +17,10 @@ public class ClockWork {
 	private Timer timer;
 	private ActionListener listener;
 	private ActionEvent event;
-<<<<<<< HEAD
-
-	// Methods
-
-	public ClockWork() { // Constructor
-=======
 	
 	//Methods
 	
 	public ClockWork() { //Constructor
->>>>>>> parent of ca9fbba... Used Eclipse Format Tool
 		
 	}
 	
@@ -55,13 +48,8 @@ public class ClockWork {
 	public void setTickTime(int tick) { //Set tick time
 		tickTime = tick;
 	}
-<<<<<<< HEAD
-
-	public void addActionListener(ActionListener watch) { // Setter for listener
-=======
 	
 	public void addActionListener(ActionListener watch) { //Setter for listener
->>>>>>> parent of ca9fbba... Used Eclipse Format Tool
 		
 	}
 	
